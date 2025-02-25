@@ -8,6 +8,10 @@ on: push
 permissions:
   contents: read
 
+env:
+      EMAIL_PASSWORD: ${{ secrets.SENDER_EMAIL_PASSWORD }}
+      EMAIL_USER_NAME : ${{ vars.SENDER_USER_NAME }}
+
 jobs:
   build:
 
