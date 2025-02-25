@@ -25,7 +25,7 @@ def send_recruiter_email_yagmail(sender_email, sender_password, recipient_emails
 
 # Example usage:
 sender_email = "chakradhargummidela@gmail.com"
-sender_password = 'teststse'
+sender_password = 'pqpj kczx axbp basx'
 recipient_emails = ["chakrispam@gmail.com"]
 subject = "Application for [Job Title]"
 body = """I am writing to express my interest in [Job Title] position. I have [Number] years of experience in [Relevant Field] and possess the skills and qualifications outlined in the job description. I am particularly interested in [Specific Aspect of the Company or Role]. I have attached my resume for your review and would welcome the opportunity to discuss my qualifications further."""
