@@ -21,6 +21,8 @@ def send_recruiter_email_yagmail(sender_email, sender_password, recipient_emails
     except Exception as e:
         print(f"Failed to send emails. Error: {e}")
 
+
+
 # Example usage:
 sender_email = "chakradhargummidela@gmail.com"
 sender_password = 'teststse'
