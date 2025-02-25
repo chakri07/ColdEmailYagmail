@@ -12,10 +12,6 @@ jobs:
   build_and_send:
 
     runs-on: ubuntu-latest
-    environment: credentials 
-    env:
-      EMAIL_PASSWORD: ${{ secrets.SENDER_EMAIL_PASSWORD }}
-      EMAIL_USERNAME : ${{ vars.SENDER_USER_NAME }}
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
@@ -27,6 +23,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
-      run: |
-        python send_email.py
+
+  send:
+    runs-on: ubuntu-latest
+    environment: credentials 
+    env:
+      EMAIL_PASSWORD: ${{ secrets.SENDER_EMAIL_PASSWORD }}
+      EMAIL_USERNAME : ${{ vars.SENDER_USER_NAME }}
+    steps:
+      - name: Lint with flake8
+        run: |
+          python send_email.py
