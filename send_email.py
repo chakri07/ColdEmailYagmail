@@ -1,4 +1,5 @@
 import yagmail
+import os
 
 def send_recruiter_email_yagmail(sender_email, sender_password, recipient_emails, subject, body, attachment_path=None):
     """Sends a standard email template with an optional attachment to a list of recruiter emails using yagmail."""
@@ -23,12 +24,18 @@ def send_recruiter_email_yagmail(sender_email, sender_password, recipient_emails
 
 
 
-# Example usage:
-sender_email = "chakradhargummidela@gmail.com"
-sender_password = 'teststse'
+
+
+
+sender_email = os.environ.get("SENDER_USER_NAME")
+sender_password = os.environ.get("SENDER_EMAIL_PASSWORD")
+
+print(sender_email)
+print(sender_password)
+
 recipient_emails = ["chakrispam@gmail.com"]
 subject = "Application for [Job Title]"
 body = """I am writing to express my interest in [Job Title] position. I have [Number] years of experience in [Relevant Field] and possess the skills and qualifications outlined in the job description. I am particularly interested in [Specific Aspect of the Company or Role]. I have attached my resume for your review and would welcome the opportunity to discuss my qualifications further."""
 attachment_path = "./chakradhar_gummidela.pdf"  # Replace with the actual path to your resume. If you don't want to attach anything, set this to None.
 
-send_recruiter_email_yagmail(sender_email, sender_password, recipient_emails, subject, body, attachment_path)
+# send_recruiter_email_yagmail(sender_email, sender_password, recipient_emails, subject, body, attachment_path)
