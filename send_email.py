@@ -25,7 +25,7 @@ def send_recruiter_email_yagmail(sender_email, sender_password, recipient_emails
 
 
 # Example usage:
-sender_email = os.getenv("EMAIL_USER_NAME")+ "@gmail.com"
+sender_email = os.getenv("EMAIL_USERNAME")+ "@gmail.com"
 sender_password = os.getenv("EMAIL_PASSWORD")
 
 print(sender_email)

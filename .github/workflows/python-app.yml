@@ -22,7 +22,7 @@ jobs:
     - name: Set Environment Variables
       run: |
         echo "EMAIL_PASSWORD=${{ secrets.SENDER_EMAIL_PASSWORD }}" >> $GITHUB_ENV
-        echo "APP_ENV=${{ vars.SENDER_USER_NAME }}" >> $GITHUB_ENV
+        echo "EMAIL_USERNAME=${{ vars.SENDER_USER_NAME }}" >> $GITHUB_ENV
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
